@@ -16,6 +16,7 @@ int main(void){
     xlog(feedback, INFO);
     snprintf(feedback, 1024, "Str2: %s --> converted double: %f", str1, d);
     xlog(feedback, INFO);
-
+    
+    free(feedback);
     return EXIT_SUCCESS;
 }
