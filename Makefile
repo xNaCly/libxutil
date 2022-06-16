@@ -1,5 +1,5 @@
 all: pre
-	gcc xutil.c test.c -o ./dist/test.out
+	gcc libxutil.c tests/test.c -o ./dist/test.out
 	./dist/test.out
 
 pre: 

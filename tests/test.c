@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "xutil.h"
+#include "../libxutil.h"
 
 
 int main(void){

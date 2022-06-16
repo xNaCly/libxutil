@@ -17,21 +17,7 @@ typedef enum {
     DEBUG,
 } Log_level;
 
-/*
- * @brief converts the given string to an integer
- * @param str 
- * @return int
- */
-int s_to_int(char *str);
-
-/*
- * @brief converts the given string to an double
- * @param str 
- * @return double
- */
-double s_to_double(char *str);
-
-/*
+/**
  * checks if file exists
  * @returns EXIT_SUCCESS or EXIT_FAILURE
  */
@@ -52,6 +38,14 @@ void throw_error(const char *text, int error);
  * @returns void
  */
 void throw_warning(const char *text, int error);
+
+/**
+ * logging utility
+ * @param str
+ * @param log_level
+ * @return void
+ */
+void xlog(const char *str, Log_level log_level);
 
 /**
  * checks if string str1 is equal to str2
@@ -77,12 +71,17 @@ int s_is_empty(const char *str);
 int s_starts_with(const char *str, const char *start);
 
 /**
- * logging utility
- * @param str
- * @param log_level
- * @return void
+ * @brief converts the given string to an integer
+ * @param str 
+ * @return int
  */
-void xlog(const char *str, Log_level log_level);
+int s_to_int(char *str);
 
+/**
+ * @brief converts the given string to an double
+ * @param str 
+ * @return double
+ */
+double s_to_double(char *str);
 
 #endif

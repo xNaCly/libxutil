@@ -2,30 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
-#include "xutil.h"
+#include "libxutil.h"
 
-int s_to_int(char *str){
-    char *ptr;
-    long l;
-
-    l = strtol(str, &ptr, 10);
-    if(strcmp(ptr, str) == 0){
-        throw_error("xutils: Can't convert str to int", -1);
-        
-    }
-    return (int)l;
-}
-
-double s_to_double(char *str){
-    char *ptr;
-    double l;
-
-    l = strtod(str, &ptr);
-    if(strcmp(ptr, str) == 0){
-        throw_error("xutils: Can't convert str to double", -1);
-    }
-    return l;
-}
 
 int file_exists(char *path) {
     struct stat st;
@@ -85,4 +63,27 @@ int s_is_empty(const char *str) {
     if (!str)
         return 1;
     return str[0] == '\0';
+}
+
+int s_to_int(char *str){
+    char *ptr;
+    long l;
+
+    l = strtol(str, &ptr, 10);
+    if(strcmp(ptr, str) == 0){
+        throw_error("xutils: Can't convert str to int", -1);
+        
+    }
+    return (int)l;
+}
+
+double s_to_double(char *str){
+    char *ptr;
+    double l;
+
+    l = strtod(str, &ptr);
+    if(strcmp(ptr, str) == 0){
+        throw_error("xutils: Can't convert str to double", -1);
+    }
+    return l;
 }
