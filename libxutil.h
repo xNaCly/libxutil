@@ -17,11 +17,18 @@ typedef enum {
     DEBUG,
 } Log_level;
 
+
+/**
+ * checks if path is a dir
+ * @returns EXIT_SUCCESS or EXIT_FAILURE
+ */
+int f_is_dir(char *path);
+
 /**
  * checks if file exists
  * @returns EXIT_SUCCESS or EXIT_FAILURE
  */
-int file_exists(char *path);
+int f_exists(char *path);
 
 /**
  * throws error and exits the program

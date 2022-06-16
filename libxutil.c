@@ -4,8 +4,14 @@
 #include <sys/stat.h>
 #include "libxutil.h"
 
+int f_is_dir(char *path){
+    struct stat st;
+    if (!f_exists(path))
+        return 0;
+    return S_ISDIR(st.st_mode);
+}
 
-int file_exists(char *path) {
+int f_exists(char *path) {
     struct stat st;
     if (path == NULL || s_is_empty(path))
         return 0;
@@ -62,7 +68,7 @@ int s_starts_with(const char *str, const char *start) {
 int s_is_empty(const char *str) {
     if (!str)
         return 1;
-    return str[0] == '\0';
+    return str[0] == '\0' || str[0] == ' ';
 }
 
 int s_to_int(char *str){
