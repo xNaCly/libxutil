@@ -9,4 +9,5 @@ functions and macros which i use across multiple projects, memory safe and optim
     - check if two strings are equal
     - check if a string starts with another string
     - check if a string is empty
-- check if a file exists
+- check if a path exists
+- check if a path is a dir
