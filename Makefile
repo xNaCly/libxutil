@@ -1,5 +1,5 @@
 all: pre
-	gcc *.c tests/test.c -o ./dist/test.out
+	gcc ./xstring.c ./xfs.c tests/test.c -o ./dist/test.out
 	./dist/test.out
 
 pre: 

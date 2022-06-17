@@ -43,7 +43,7 @@ int main(void){
 
 3. compile:
 ```bash
-gcc cpak_modules/libxutil/*.c ./main.c -o ./main.out
+gcc cpak_modules/libxutil/xstring.c ./main.c -o ./main.out
 ```
 
 ### Manually 
@@ -76,6 +76,6 @@ int main(void){
 3. Compile
 
 ```bash
-gcc lib/libxutil/*.c ./main.c -o ./main.out
+gcc lib/libxutil/xstring.c ./main.c -o ./main.out
 ```
 
