@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include "../libxutil.h"
+#include "../xstring.h"
+#include "../xfs.h"
 
 int main(void){
     assert(f_exists("./dist"));
